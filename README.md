@@ -1,0 +1,2 @@
+# hangulatkoveto_weblap_projekt
+Szkriptnyelvek projekt
