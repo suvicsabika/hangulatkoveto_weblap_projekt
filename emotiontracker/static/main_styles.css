@@ -1,0 +1,203 @@
+body {
+    font-family: sans-serif;
+    animation-name: becsuszo_animacio;
+    animation-duration: 2.5s;
+    background-image: url("/static/images/background.jpg");
+    background-repeat: space;
+}
+
+div {
+    border-radius: 20px;
+}
+
+tr {
+    height: 75px;
+}
+
+.bal-div {
+    background-color: white;
+    padding-top: 20px;
+}
+
+.jobb-div {
+    border-left: 1px solid gray;
+    padding-top: 20px;
+}
+
+.sidebar {
+    border-radius: 10px;
+}
+
+.bejelentkezes_form {
+    text-align: center;
+}
+
+.login_animacio {
+    animation-name: becsuszo_animacio;
+    animation-duration: 4s;
+}
+
+.login_animacio:hover {
+    opacity: 0.5;
+}
+
+@keyframes becsuszo_animacio {
+    from {
+        opacity: 0;
+        padding-left: 75px;
+    }
+    to {
+        opacity: 1.0;
+        padding-left: 0px;
+    }
+}
+
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+li {
+    list-style: none;
+}
+
+.naptar {
+    text-align: right;
+    margin: 0px 0px 0px 70px;
+    padding: 0px 3px 0px 0px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(253, 136, 136);
+}
+
+.naptar-kivalasztott {
+    text-align: right;
+    margin: 0px 0px 0px 70px;
+    padding: 0px 3px 0px 0px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(78, 50, 223)
+}
+
+td img {
+    width: 75px;
+    height: auto;
+}
+
+p {
+    position: relative;
+    font-weight: bold;
+}
+
+p::before{
+    background-color: #dfe1d9;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+    border-radius: 10px;
+}
+
+@keyframes erzelmes_hatter {
+    from {
+        opacity: 0;
+        background: white;
+    }
+    to {
+        opacity: 1;
+        background: rgb(255,220,91);
+        background: linear-gradient(135deg, rgba(255,220,91,1) 0%, rgba(255,192,118,1) 100%);
+    }
+}
+
+.kivalasztva {
+    background-color: black;
+}
+
+.regisztracios_form {
+    text-align: center;
+}
+
+.error {
+    text-decoration: none;
+    border: 2px solid red;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.test {
+    background-color: #e0e0e0;
+}
+
+.table {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.aktualis-honap {
+    font-weight: bold;
+}
+
+#segito {
+    transition: 0.6s;
+}
+
+.top {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+  
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.okjelszo, .ok, .error, .help-block {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>    
+        <meta charset="utf-8">
+        <Title>Hangulat követő</Title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="static/images/balloons.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/main_styles.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="/static/main_script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-light bg-light">
+            <h1>{{ name }} naptára</h1>
+            <li class="nav-item">
+                <a href="{{ url_for('main') }}" class="nav-link text-secondary" aria-current="page"><img src="static/images/naptar.png">Naptár</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('osszefoglalo') }}" class="nav-link text-secondary" aria-current="page"><img src="static/images/osszefoglalo.png">Összefoglaló</a>        
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('fiok') }}" class="nav-link text-secondary" aria-current="page"><img src="static/images/fiok.png">Fiók</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-lg btn-secondary btn-block button-55" style="float:right;"><a href="{{ url_for('logout') }}" style="text-decoration: none; color: black;">Kijelentkezés</a></button>
+            </li>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 bal-div">
+                    <p>Kattintson az egyik lufira ami a mai napjához leginkább passzoló hangulatot reprezentálja:</p>
+                    <img src="{{ kep }}" usemap="#image-map" title="Brúnó, Hangulat követő segítő" alt="Hangulat követő segítő" id="segito">
+                    <map name="image-map" id="my-image-map">
+                        <area onclick="erzesBe(0)" coords="196,64,40" shape="circle">
+                        <area onclick="erzesBe(1)" coords="280,73,39" shape="circle">
+                        <area onclick="erzesBe(2)" coords="356,92,37" shape="circle">
+                        <area onclick="erzesBe(3)" coords="113,71,38" shape="circle">
+                        <area onclick="erzesBe(4)" coords="206,178,36" shape="circle">
+                        <area onclick="erzesBe(5)" coords="281,172,36" shape="circle">
+                        <area onclick="erzesBe(6)" coords="354,184,38" shape="circle">
+                        <area onclick="erzesBe(7)" coords="241,247,37" shape="circle">
+                        <area onclick="erzesBe(8)" coords="313,265,37" shape="circle">
+                    </map>
+                </div>
+                <div class="col-sm-8 kozepso-div">
+                    <div class="row">
+                       <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h1 class="aktualis-honap"><span id="tablazat-fejlec-ev"></span><span id="tablazat-fejlec-honap"></span></h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-lg btn-secondary btn-block button-55" onclick="Balra()" style="float: right;">Előző hónap</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-lg btn-secondary btn-block button-55" onclick="Jobbra()">Következő hónap</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr id="elso-het">
+                                        </tr>
+                                        <tr id="masodik-het">
+                                        </tr>
+                                        <tr id="harmadik-het">
+                                        </tr>
+                                        <tr id="negyedik-het">
+                                        </tr>
+                                        <tr id="otodik-het">
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
