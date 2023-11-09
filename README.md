@@ -1,3 +1,4 @@
 # Hangulatkövető weblap projekt - Szkriptnyelvek
-Szkriptnyelvek tárgyra elkészített, saját ötleten alapuló, Flask projekt.
-A cél egy weblap, mely egy személy napi átlagos hangulatát tudja követni, így látni a havi trendeket.
+Egyetemi projekt a "Szkriptnyelvek" c. tantárgyra. A cél az volt, hogy Python - Flask keretrendszerben egy hangulat követő webalkalmazást hozzak létre, melyben a felhasználó tudja követni átlagos hangulat trendjeit. 
+
+https://github.com/suvicsabika/hangulatkoveto_weblap_projekt
